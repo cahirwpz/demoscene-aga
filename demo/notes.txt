@@ -1,0 +1,20 @@
+From Cahir:
+
+Let me apologize all of you that waited so long for the release. I'm not going
+to explain all of the reasons behind such a delay, but will try to shed some
+light on it. The root problem was that I did not own MC68060 turbo card at the
+time of writing the demo and the only test platform we had was WinUAE. Whilst
+the code quality produced by GCC 2.95.3 is generally good, GCC is still not
+well suited to write CPU intensive rendering loops. During the party we
+learned that our production was unacceptably slow on the real hardware.
+Consequently I spent several weeks rewriting some loops in assembly and
+optimizing CPU intensive parts, but again we still were missing the hardware.
+Eventually Gorzyga/Decree helped us to test the optimized code on his
+68060/62. I'd like to thank him right now, for his share in closing the
+release version :)
+
+Compared to party version we've got about 50% performance improvement (on
+average). Almost every piece of rendering code has been somehow altered. We
+changed loading screen to copyright free image (previously KS 3.1 boot screen)
+and corrected one texture / palette (the one under rotating translucent
+object).
