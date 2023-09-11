@@ -1,3 +1,4 @@
+#include <alloca.h>
 #include "std/debug.h"
 #include "gfx/layers.h"
 

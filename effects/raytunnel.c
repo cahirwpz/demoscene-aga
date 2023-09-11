@@ -110,7 +110,7 @@ static void RaycastCalculateView(int frameNumber) {
   V3D_Sub(&transformed[2], &transformed[2], &transformed[0]);
 }
 
-static void RenderShadeMap(PixBufT *shades, uint16_t *map) {
+static void RenderShadeMap(PixBufT *shades, int16_t *map) {
   int n = shades->width * shades->height;
   uint8_t *dst = shades->data;
   uint32_t offset;

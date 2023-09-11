@@ -1,3 +1,4 @@
+#include <string.h>
 #include "std/memory.h"
 #include "std/stack.h"
 #include "std/table.h"

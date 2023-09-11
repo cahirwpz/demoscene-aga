@@ -1,8 +1,6 @@
 #ifndef __STD_MATH__
 #define __STD_MATH__
 
-#define __HAVE_68881__
-
 #include <math.h>
 #include "std/types.h"
 
@@ -14,7 +12,7 @@ inline static float clampf(float x) {
   return x;
 }
 
-#ifdef AMIGA
+#if 0 /* AMIGA */
 inline static float fabsf(float x) {
   float value;
 

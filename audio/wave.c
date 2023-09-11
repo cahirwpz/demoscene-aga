@@ -50,7 +50,7 @@ bool WaveFileOpen(WaveFileT *wave, const char *filename) {
           if (ext_chunk)
             IoSeek(file, bswap16(fmt.cbSize), IO_SEEK_CUR);
         } else if (chunk.ckId == ID_FACT) {
-          IoReadLE32(file, &dwSampleLength);
+          IoReadLE32(file, (uint32_t *)&dwSampleLength);
         } else if (chunk.ckId == ID_DATA) {
           wave->samplesOffset = IoTell(file);
           dataSize = bswap32(chunk.ckSize);

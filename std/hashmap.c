@@ -61,7 +61,7 @@ HashMapT *NewHashMap(size_t initialSize) {
     }
 
     if (n == 0)
-      PANIC("Table too large (%ld)", initialSize);
+      PANIC("Table too large (%d)", initialSize);
 
     self->map = NewTable(EntryT, n);
   }

@@ -1,3 +1,4 @@
+#include <string.h>
 #include "txtgen/txtgen.h"
 
 void ChannelClear(PixBufT *dst asm("a0"), uint8_t value asm("d0")) {

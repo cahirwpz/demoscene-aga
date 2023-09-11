@@ -14,7 +14,7 @@ void WaveFilePrint(WaveFileT *file, const char *path) {
   printf("block align     : %d\n", file->blockAlign);
   printf("bits per sample : %d\n", file->bitsPerSample);
   printf("sampling freq   : %d\n", file->samplesPerSec);
-  printf("samples         : %ld\n", file->samplesNum);
+  printf("samples         : %d\n", file->samplesNum);
 }
 
 int main(int argc, char **argv) {

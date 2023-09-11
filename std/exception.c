@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "std/exception.h"
 #include "std/memory.h"
 

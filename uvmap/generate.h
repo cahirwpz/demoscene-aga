@@ -19,7 +19,7 @@ void UVMapGenerateTwirl(UVMapT *map, float strenght, bool seamless);
 void UVMapGenerateOffset(UVMapT *map, float uOffset, float vOffset);
 
 #define UVMapGenerate(NAME, U, V)                              \
-void UVMapGenerate ## NAME ## (UVMapT *map)                    \
+void UVMapGenerate ## NAME (UVMapT *map)                    \
 {                                                              \
   float dx = 2.0f / (int)map->width;                           \
   float dy = 2.0f / (int)map->height;                          \

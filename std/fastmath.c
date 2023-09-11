@@ -30,13 +30,16 @@ float FastAtan2(float dy, float dx) {
  */
 __regargs
 float FastInvSqrt(float x) {
-  uint32_t i;
+  union {
+    uint32_t i;
+    float f;
+  } h;
   float x2;
 
+  h.f = x;
   x2 = x * 0.5f;
-  i  = * (uint32_t *) &x;
-  i  = 0x5f3759df - (i >> 1);
-  x  = * (float *) &i;
+  h.i  = 0x5f3759df - (h.i >> 1);
+  x  = h.f;
 
   return x * (1.5f - (x2 * x * x));
 }

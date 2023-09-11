@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3
 
 import argparse
 import logging
@@ -37,16 +37,16 @@ if __name__ == '__main__':
         if macro == "ARRAY":
           arrays.append(Symbol(args[2], args[2]))
 
-  print "SymbolT CallbackSymbols[] = {"
+  print("SymbolT CallbackSymbols[] = {")
   for callback in callbacks:
-    print "  {\"%s\", (void *)&%s}," % (callback.name, callback.addr)
-  print "  {NULL, NULL}"
-  print "};"
+    print("  {\"%s\", (void *)&%s}," % (callback.name, callback.addr))
+  print("  {NULL, NULL}")
+  print("};")
 
-  print "SymbolT ParameterSymbols[] = {"
+  print("SymbolT ParameterSymbols[] = {")
   for parameter in parameters:
-    print "  {\"%s\", (void *)&%s}," % (parameter.name, parameter.addr)
+    print("  {\"%s\", (void *)&%s}," % (parameter.name, parameter.addr))
   for array in arrays:
-    print "  {\"%s\", (void *)%s}," % (array.name, array.addr)
-  print "  {NULL, NULL}"
-  print "};"
+    print("  {\"%s\", (void *)%s}," % (array.name, array.addr))
+  print("  {NULL, NULL}")
+  print("};")

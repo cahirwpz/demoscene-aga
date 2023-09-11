@@ -1,3 +1,4 @@
+#include <alloca.h>
 #include "std/memory.h"
 #include "std/debug.h"
 #include "std/table.h"

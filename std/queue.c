@@ -1,3 +1,4 @@
+#include <string.h>
 #include "std/queue.h"
 #include "std/memory.h"
 #include "std/table.h"

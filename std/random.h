@@ -15,12 +15,14 @@ static inline int32_t RandomInt32(int32_t *i) {
 
 /* Returns a value in [0.0, 1.0) */
 static inline float RandomFloat(int32_t *i) {
-  int32_t n = RandomInt32(i);
-  float f;
-  n &= ~0x7fffff;
-  n |= 0x3f800000;
-  f = *(float *)&n;
-  return f - 1.0;
+  union {
+    int32_t n;
+    float f;
+  } h;
+  h.n = RandomInt32(i);
+  h.n &= ~0x7fffff;
+  h.n |= 0x3f800000;
+  return h.f - 1.0;
 }
 
 #endif

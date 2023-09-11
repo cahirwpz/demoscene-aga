@@ -1,3 +1,4 @@
+#include <float.h>
 #include "std/debug.h"
 #include "std/hashmap.h"
 #include "std/memory.h"

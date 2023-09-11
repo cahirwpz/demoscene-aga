@@ -2,6 +2,7 @@
 #include <proto/graphics.h>
 
 #include <stdarg.h>
+#include <string.h>
 
 #include "std/math.h"
 #include "tools/frame.h"

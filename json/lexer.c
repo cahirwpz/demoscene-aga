@@ -1,4 +1,5 @@
 #include <string.h>
+#include <ctype.h>
 
 #include "lexer.h"
 
@@ -11,9 +12,11 @@ void LexerInit(LexerT *lexer, const char *text) {
   lexer->errmsg = NULL;
 }
 
+#if 0
 static inline bool isdigit(char c) {
   return (c >= '0' && c <= '9');
 }
+#endif
 
 static bool SkipNumber(LexerT *lexer, TokenT *token) {
   char *pos = lexer->pos;
